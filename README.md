@@ -1,10 +1,10 @@
 # BME450-project
 
 #title:
-  Hand signal recognition for sign language 
+  Age Estimation Project
 
 #group members:
   Caleb Wong (ccalebwongg)
 
 #project description:
-  In this project, I plan to use neural networks to recognize and translate hand signals in sign language. I plan to use public datasets from online libraries that provide educational content for people learning sign language. The overall goal of the project is to increase the accessibility and communication skills for people using hearing loss by providing non-sign language users a translation of the message being conveyed.
+  In this project, I plan to use neural networks and models to estimate the age range of a person based on a single picture of their face. For the training and testing, I plan to use images of people from public online libraries with known ages to as to get an accurate and representive data set. The overall goal of the project is to provide, quick and rough age estimation through neural neworks and code while learning how to apply what I have learned in class.
