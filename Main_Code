@@ -52,7 +52,7 @@ transform = transforms.Compose([
     transforms.ToTensor(),
 ])
 
-# Initialize dataset and dataloaders
+#initialize dataset and dataloaders
 dataset = UTKFaceDataset(image_dir="UTKFace", transform=transform)
 
 train_size = int(0.8 * len(dataset))
@@ -114,11 +114,11 @@ model = AgePredictorNet()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
-# Losses
+#get losses
 regression_loss_fn = nn.MSELoss()
 classification_loss_fn = nn.CrossEntropyLoss()
 
-# Optimizer
+#optimizer
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
 
 #trainng loop
@@ -173,7 +173,7 @@ def test_loop(dataloader, model):
 
 ## Training and Checkpoint Saving <---
 
-# Save model function
+#save model function
 def save_checkpoint(model, optimizer, epoch, path="age_model_checkpoint.pth"):
     torch.save({
         "epoch": epoch,
@@ -181,7 +181,7 @@ def save_checkpoint(model, optimizer, epoch, path="age_model_checkpoint.pth"):
         "optimizer_state_dict": optimizer.state_dict(),
     }, path)
 
-# Load model function
+#load model function
 def load_checkpoint(model, optimizer, path="age_model_checkpoint.pth"):
     if os.path.exists(path):
         checkpoint = torch.load(path)
